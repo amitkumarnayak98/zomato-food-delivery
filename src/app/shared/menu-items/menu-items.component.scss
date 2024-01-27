@@ -1,0 +1,44 @@
+@import "../../../styles.scss";
+
+.example-header-image {
+  // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+:host ::ng-deep {
+  .card_container-block {
+    column-gap: 35px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    mat-card.card-container {
+      display: flex;
+      width: 22%;
+      height: 335px;
+      flex-direction: column;
+
+      img {
+        width: unset;
+        height: 90%;
+      }
+
+      .mat-card-image,
+      mat-card-actions {
+        margin-top: unset !important;
+      }
+
+      mat-card-actions {
+        padding: 0px 15px 0px 15px;
+      }
+
+      mat-card-header {
+        padding: 10px 10px;
+
+        mat-card-subtitle {
+          overflow: hidden;
+          height: 34px;
+        }
+      }
+    }
+  }
+}
