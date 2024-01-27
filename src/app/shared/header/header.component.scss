@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+:host ::ng-deep {
+  .header {
+    background-color: $commanWhite;
+    .nav_link-block {
+      margin: 0 0 0 10px;
+      padding: 0;
+      gap: 10px;
+      li {
+        list-style-type: none !important;
+        a {
+          color: $sparklingForst;
+          font-size: 1rem;
+          text-decoration: auto;
+          font-family: $SansReg;
+        }
+      }
+    }
+  }
+}
