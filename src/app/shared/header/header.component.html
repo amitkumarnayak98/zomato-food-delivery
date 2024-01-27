@@ -1,0 +1,15 @@
+<mat-toolbar class="header align-center">
+  <button
+    mat-icon-button
+    class="hamburger_icon"
+    aria-label="Get all essential settings with hamburger icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Zomato Food Delivery</span>
+  <ul class="nav_link-block disp-flex">
+    <li *ngFor="let nav of navLinks">
+      <a routerLink="{{ nav.link }}">{{ nav.name }}</a>
+    </li>
+  </ul>
+</mat-toolbar>
