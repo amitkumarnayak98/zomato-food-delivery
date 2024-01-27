@@ -1,0 +1,28 @@
+<div class="disp-flex card_container-block">
+  <mat-card
+    class="card-container"
+    *ngFor="let food of foodListMenu"
+    (click)="navigate(food)"
+  >
+    <img mat-card-image [src]="food.photoUrl" alt="Photo of a Shiba Inu" />
+    <mat-card-header>
+      <mat-card-title>{{ food.restaurantName }}</mat-card-title>
+      <mat-card-subtitle>{{ food.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-icon-button (click)="isClickedLikeIcon(food)">
+        <mat-icon *ngIf="food.isClicked === true" color="warn"
+          >favorite</mat-icon
+        >
+        <mat-icon *ngIf="food.isClicked === false">favorite_outline</mat-icon>
+      </button>
+      <button mat-icon-button><mat-icon>star_half</mat-icon></button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar
+        *ngIf="food.isLoader === true"
+        mode="indeterminate"
+      ></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</div>
